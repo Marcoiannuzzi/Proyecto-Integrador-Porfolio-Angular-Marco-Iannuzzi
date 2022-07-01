@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400&family=Roboto:wght@300;400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto Mono', monospace;
+    text-shadow: 2px 2px 6px black, -2px -2px 6px black, 2px 2px 6px black, -2px -2px 6px black;
+}
+
+.contenedor{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://img.wallpapersafari.com/desktop/1920/1080/9/59/ZcVzSn.jpeg');
+    background-repeat:no-repeat ;
+    background-size:cover ;
+}
+
+.conteiner{
+    padding: 15px;
+    border-radius: 25px;
+    width: 80vw;
+    background-color: rgba(85, 141, 190, 0.432);
+}
+
+.encabezado{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.perfilConteiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.perfil{
+    width: 180px;
+    border: 5px outset rgba(34, 34, 170, 0.541);
+    border-radius: 50%;
+}
+
+.botones{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.logoCode{
+    width: 250px;
+}
+
+
+/* -- acerca de -- */
+
+.acercaDe, .educacion, .experiencia, .skills, .proyectos{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.listaCursos, .listaexperiencias, .listaSkills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
