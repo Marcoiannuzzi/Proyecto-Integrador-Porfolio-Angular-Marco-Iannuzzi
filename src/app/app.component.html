@@ -1,102 +1,13 @@
 <div class="contenedor">
-    <div class="conteiner encabezado">
-
-        <div class="perfilConteiner">
-            <img src="../assets/imagenes/1640616075219.jpg" class="perfil" alt="foto de perfil">
-            <h2 class="nombre">Portfolio Marco Iannuzzi</h2>
-            <h3 class="ocupacion">Full Stack Developer</h3>
-            <h3 class="localidad">Villa Dolores, Cordoba</h3>
-            <h3 class="telefono">03544-629803</h3>
-            <div class="botones">
-                <button type="button" class="btn btn-outline-primary">Tengo Interes en</button>
-                <button type="button" class="btn btn-outline-primary">Agregar</button>    
-                <button type="button" class="btn btn-outline-primary">Mas</button> 
-            </div>
-        </div>   
-
-        <div class="logo">
-            <button type="button" class="btn btn-outline-primary">Login</button> 
-            <img class="img-fluid-md logoCode" src="../assets/imagenes/code.png" alt="logo coding">
-        </div>  
-
-    </div>
-
-    <!-- Se deja lista la estructura para inyectar datos desde un json -->
     
-    <div class="conteiner acercaDe">
-        <h3>Acerca de</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum nemo </p>    
-    </div>
-
-    <div class="conteiner educacion">
-
-        <h3>Educacion</h3>
-
-        <div class="listaCursos">
-            <ul>
-                 <li>
-                    <h4>Institucion</h4>
-                    <h5>titulo</h5>
-                    <span> desde </span><span> hasta</span>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                   <h4>Institucion</h4>
-                   <h5>titulo</h5>
-                   <span> desde </span><span> hasta</span>
-               </li>
-           </ul>
-        </div>
-
-    </div>
-
-    <div class="conteiner experiencia">
-
-        <h3>Experiencia</h3>
-
-        <div class="listaexperiencias">
-            <ul>
-                <li>
-                    <h4>Institucion</h4>
-                    <h5>Tareas</h5>
-                    <span> desde </span><span> hasta</span>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h4>Institucion</h4>
-                    <h5>Tareas</h5>
-                    <span> desde </span><span> hasta</span>
-                </li>
-            </ul>
-        
-        </div>
-    </div>
-
-    <div class="conteiner skills">
-        <h3>Skills</h3>
-        <div class="listaSkills">
-            <div>
-                <span>skill1</span>
-            </div>
-            <div>
-                <span>skill2</span>
-            </div>
-        </div>
-        
-    </div>
+    <app-encabezado></app-encabezado>
+    <app-acerca-de></app-acerca-de>
+    <app-educacion></app-educacion>
+    <app-experiencia></app-experiencia>
+    <app-skills></app-skills>
+    <app-proyectos></app-proyectos>
+    <app-footer></app-footer>
     
-    <div class="conteiner proyectos">
-        <h3>Proyectos</h3>
-        <span>Cards</span> 
-    </div>
-
-    <div class="conteiner footer">
-        <h3>footer</h3>
-        <span>contacto</span> 
-    </div>
-
 </div>
 
 <router-outlet></router-outlet>

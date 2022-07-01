@@ -31,8 +31,8 @@
 .encabezado{
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-wrap: wrap-reverse;
+    gap: 15px;
 }
 
 .perfilConteiner{
@@ -61,7 +61,7 @@
 }
 
 .logoCode{
-    width: 250px;
+    width: 200px;
 }
 
 
