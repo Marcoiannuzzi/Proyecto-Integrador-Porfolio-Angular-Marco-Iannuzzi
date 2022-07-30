@@ -2,21 +2,14 @@
 
     <h3>Educacion</h3>
 
-    <div class="listaCursos">
-        <ul>
+    <div class="listaCursos " >
+        <ul *ngFor="let educacion of educacion">
              <li>
-                <h4>Institucion</h4>
-                <h5>titulo</h5>
-                <span> desde </span><span> hasta</span>
+                <h4>{{educacion.institucion}}</h4>
+                <h5>{{educacion.titulo}}</h5>
+                <p>Desde: {{educacion.inicio}}</p>
+                <p>Hasta: {{educacion.fin}}</p>
             </li>
         </ul>
-        <ul>
-            <li>
-               <h4>Institucion</h4>
-               <h5>titulo</h5>
-               <span> desde </span><span> hasta</span>
-           </li>
-       </ul>
     </div>
-
 </div>

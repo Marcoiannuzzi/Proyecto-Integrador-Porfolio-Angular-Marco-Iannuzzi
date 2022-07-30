@@ -8,7 +8,7 @@ import { PersonaService } from 'src/app/service/persona.service';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
-  persona : Persona = new Persona("","","","","","","","","");
+  persona : Persona|undefined;
 
   constructor(private personaService:PersonaService ) { }
 
