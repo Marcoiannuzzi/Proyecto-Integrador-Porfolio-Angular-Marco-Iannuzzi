@@ -3,20 +3,14 @@
     <h3>Experiencia</h3>
 
     <div class="listaexperiencias">
-        <ul>
+        <ul *ngFor="let experiancia of listaExperiencias">
             <li>
-                <h4>Institucion</h4>
-                <h5>Tareas</h5>
-                <span> desde </span><span> hasta</span>
+                <h4>{{experiancia.institucion}}</h4>
+                <h5>{{experiancia.tarea}}</h5>
+                <span> {{experiancia.inicio}} </span><br><span>{{experiancia.fin}}</span>
             </li>
         </ul>
-        <ul>
-            <li>
-                <h4>Institucion</h4>
-                <h5>Tareas</h5>
-                <span> desde </span><span> hasta</span>
-            </li>
-        </ul>
+       
     
     </div>
 </div>
