@@ -1,4 +1,7 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
   selector: 'app-acerca-de',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcercaDeComponent implements OnInit {
 
-  constructor() { }
+  persona : Persona = new Persona("","","","","","","","","");
+
+  constructor(private personaService:PersonaService ) { }
 
   ngOnInit(): void {
+    this.personaService.getPersona().subscribe(data=>{this.persona=data})
   }
 
 }

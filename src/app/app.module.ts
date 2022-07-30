@@ -12,6 +12,11 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { FooterComponent } from './componentes/footer/footer.component';
 import { LogoComponent } from './componentes/logo/logo.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { HttpClientModule } from '@angular/common/http';
+import { InicioComponent } from './componentes/inicio/inicio.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -24,12 +29,16 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     ProyectosComponent,
     FooterComponent,
     LogoComponent,
+    InicioComponent,
+    LoginComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgCircleProgressModule.forRoot({})
+    HttpClientModule,
+    NgCircleProgressModule.forRoot({}),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
