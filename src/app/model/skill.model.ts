@@ -1,5 +1,5 @@
 export interface Skill{
     skillId:number;
-    imgUrl:String;
+    nombre:String;
     porcentaje:number;
 }
