@@ -1,19 +1,15 @@
 <div class="conteiner proyectos">
     <h3>Proyectos</h3>
-    <div class="listaProyectos d-flex justify-content-start align-items-center flex-wrap gap-2">
-        <div class="card bg-transparent" style="width: 18rem;">
-            <img src="../../../assets/imagenes/arg-programa.png" class="card-img-top" alt="proyecto1">
-            <div class="card-body">
-                <h5 class="card-title">Quo-Vadis</h5>
-                <p class="card-text">Sitio web para el cafe-bar Quo Vadis</p>
-            </div>
-        </div> 
-        <div class="card bg-transparent" style="width: 18rem;">
-            <img src="../../../assets/imagenes/arg-programa.png" class="card-img-top" alt="proyecto2">
-            <div class="card-body">
-                <h5 class="card-title">Encriptador</h5>
-                <p class="card-text">Programa para escribir mensajes en codigo</p>
-            </div>
-        </div> 
+    <div class="listaProyectos d-flex justify-content-start align-items-center flex-wrap gap-2" >
+        <div *ngFor="let proyecto of listaProyectos">
+            <div class="card bg-transparent" style="width: 18rem;">
+                <img src="../../../assets/imagenes/arg-programa.png" class="card-img-top" alt="proyecto1">
+                <div class="card-body" >
+                    <h5 class="card-title">{{proyecto.titulo}}</h5>
+                    <p class="card-text">{{proyecto.descripcion}}</p>
+                    <a [href]="proyecto.proyUrl" target="_blank">Mirá el Proyecto</a>
+                </div>
+            </div> 
+        </div>
     </div>
 </div>

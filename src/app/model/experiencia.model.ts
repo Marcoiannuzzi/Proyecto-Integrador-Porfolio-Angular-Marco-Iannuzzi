@@ -1,7 +1,7 @@
 export interface Experiencia {
     expId:number;
     institucion:String;
-    tarea:String;
+    tareas:String;
     inicio:String;
     fin:String;
 }
