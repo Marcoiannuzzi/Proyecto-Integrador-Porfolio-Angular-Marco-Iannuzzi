@@ -15,4 +15,19 @@ export class EducacionService {
   public getEducacion():Observable<Educacion[]>{
     return this.http.get<Educacion[]>(`${this.url}estudios`)
   }
+
+  public createEducacion(educacion:Educacion):Observable<any>{
+    return this.http.post<any>(`${this.url}estudios`, educacion)
+  }
+
+  public updateEducacion(educacion:Educacion):Observable<any>{
+    return this.http.put<any>(`${this.url}estudios`, educacion)
+  }
+
+  public deleteEducacion(id:number):Observable<any>{
+    return this.http.delete<any>(`${this.url}estudios${id}`)
+  }
+
+
+
 }

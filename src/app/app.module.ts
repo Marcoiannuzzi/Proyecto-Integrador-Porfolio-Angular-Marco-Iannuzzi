@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { NuevoProyComponent } from './forms/proyecto/nuevo-proy.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { FormsModule } from '@angular/forms';
     LogoComponent,
     InicioComponent,
     LoginComponent,
+    NuevoProyComponent,
    
   ],
   imports: [

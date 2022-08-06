@@ -14,7 +14,18 @@ export class EducacionComponent implements OnInit {
   constructor(private educacionService:EducacionService) { }
 
   ngOnInit(): void {
-    this.educacionService.getEducacion().subscribe((data)=>{this.educacion=data})
+    this.cargarEducacion();
+  }
+  cargarEducacion(){
+    this.educacionService.getEducacion().subscribe((data)=>{this.educacion=data});
+  }
+
+  crearEducacion(educacion:Educacion){
+    this.educacionService.createEducacion(educacion).subscribe(()=>this.cargarEducacion)
+  }
+
+  borrar(id:number){
+    this.educacionService.deleteEducacion(id).subscribe(()=> this.cargarEducacion())
   }
 
 }
