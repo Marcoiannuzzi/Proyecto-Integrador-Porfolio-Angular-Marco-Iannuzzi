@@ -10,13 +10,26 @@ import { ExperienciaService } from 'src/app/service/experiencia.service';
 export class ExperienciaComponent implements OnInit {
 
   listaExperiencias:Experiencia[]|undefined;
+  experiencia:Experiencia|undefined;
   token:string|null=null;
 
   constructor(private experianciaService:ExperienciaService) { }
 
   ngOnInit(): void {
-    this.experianciaService.getExperiencia().subscribe((data)=>{this.listaExperiencias=data});
+    this.cargarExp();
     this.token=sessionStorage.getItem('token')
+  }
+
+  cargarExp(){
+    this.experianciaService.getExperiencia().subscribe((data)=>{this.listaExperiencias=data});
+  }
+
+  crearExp(experiencia:Experiencia){
+    this.experianciaService.createExperiencia(experiencia).subscribe(()=>this.cargarExp())
+  }
+
+  borrar(id:number){
+    this.experianciaService.deleteExperiencia(id).subscribe(()=> this.cargarExp())
   }
 
 }

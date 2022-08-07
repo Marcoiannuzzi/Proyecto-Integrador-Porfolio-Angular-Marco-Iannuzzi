@@ -1,7 +1,7 @@
 <div class="contenedorLogin d-flex justify-content-center align-items-center">
     <div class="conteiner d-flex gap-5 justify-content-center align-items-center" >
         <img src="../../../assets/imagenes/coding.png" alt="">
-        <form (ngSubmit)="login()">
+        <form (ngSubmit)="login()" novalidate #f="ngForm">
             <div class="mb-3">
             <label for="email" class="form-label">Correo Electronico</label>
             <input type="email" name="email" class="form-control" id="Email" required [(ngModel)]="email">
@@ -12,8 +12,9 @@
             </div>
             <div class="botones">
                 <button type="submit" class="btn btn-primary">Login</button>
-                <button type="submit" class="btn btn btn-danger" (click)="volver()" >Cancelar</button>
+                <button type="submit" class="btn btn btn-danger" (click)="volver()" >Volver</button>
             </div>
             
         </form>
     </div>
+</div>

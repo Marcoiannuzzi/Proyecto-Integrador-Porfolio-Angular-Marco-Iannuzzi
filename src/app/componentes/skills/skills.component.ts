@@ -15,8 +15,20 @@ export class SkillsComponent implements OnInit {
   constructor(private skillService:SkillService) { }
 
   ngOnInit(): void {
-    this.skillService.getSkill().subscribe(data=>{this.listaSkills=data})
+    this.cargarSkill();
     this.token=sessionStorage.getItem('token');
+  }
+
+  cargarSkill(){
+    this.skillService.getSkill().subscribe((data)=>{this.listaSkills=data});
+  }
+
+  crearSkill(educacion:Skill){
+    this.skillService.createSkill(educacion).subscribe(()=>this.cargarSkill())
+  }
+
+  borrar(id:number){
+    this.skillService.deleteSkill(id).subscribe(()=> this.cargarSkill())
   }
 
 }

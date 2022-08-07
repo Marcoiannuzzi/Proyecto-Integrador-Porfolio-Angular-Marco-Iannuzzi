@@ -1,1 +1,19 @@
-<p>nueva-skill works!</p>
+<div class="cont d-flex justify-content-center align-items-center">
+    <div class="conteiner d-flex gap-5 justify-content-center align-items-center" >
+        <img src="../../../assets/imagenes/coding.png" class="w-25" alt="">
+        <form (ngSubmit)="enviar()">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Skill</label>
+                <input type="text" name="nombre" class="form-control" id="nombre" required [(ngModel)]="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="porcentaje" class="form-label">Porcentaje</label>
+                <input type="text" name="porcentaje" class="form-control" id="porcentaje" required [(ngModel)]="porcentaje">
+            </div>
+            <div class="botones">
+                <button type="submit" class="btn btn-primary">Crear</button>
+                <button type="submit" class="btn btn btn-danger" (click)="volver()" >Cancelar</button>
+            </div>
+            
+        </form>
+    </div>

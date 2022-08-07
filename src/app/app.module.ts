@@ -17,6 +17,10 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { NuevoProyComponent } from './forms/proyecto/nuevo-proy.component';
+import { NuevaEduComponent } from './forms/educacion/nueva-edu.component';
+import { NuevaExpComponent } from './forms/experiencia/nueva-exp.component';
+import { NuevaSkillComponent } from './forms/skill/nueva-skill.component';
+
 
 
 @NgModule({
@@ -33,6 +37,10 @@ import { NuevoProyComponent } from './forms/proyecto/nuevo-proy.component';
     InicioComponent,
     LoginComponent,
     NuevoProyComponent,
+    NuevaEduComponent,
+    NuevaExpComponent,
+    NuevaSkillComponent,
+
    
   ],
   imports: [

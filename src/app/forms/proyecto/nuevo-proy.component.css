@@ -1,0 +1,9 @@
+.cont {
+    height: 100vh;
+    background-color: rgb(153, 199, 252);
+}
+
+input{
+    text-decoration: none;
+    text-shadow: none;
+}

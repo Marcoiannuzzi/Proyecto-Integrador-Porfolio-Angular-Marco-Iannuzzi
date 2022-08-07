@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Skill } from 'src/app/model/skill.model';
+import { SkillService } from 'src/app/service/skill.service';
 
 @Component({
   selector: 'app-nueva-skill',
@@ -7,9 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NuevaSkillComponent implements OnInit {
 
-  constructor() { }
+  skillId:number=0;
+  nombre:String='';
+  porcentaje:number=0;
+
+  constructor(private router:Router, private skillService:SkillService) { }
 
   ngOnInit(): void {
   }
+
+  enviar(){
+    const skill:Skill = {
+      skillId:this.skillId,
+      nombre:this.nombre,
+      porcentaje:this.porcentaje,
+    }
+    this.skillService.createSkill(skill).subscribe(()=> alert('Nueva Skill agregada con exito!'));
+    this.router.navigate(['inicio']);
+
+  }
+
+  volver(){
+    this.router.navigate(['inicio']);
+  }
+
 
 }

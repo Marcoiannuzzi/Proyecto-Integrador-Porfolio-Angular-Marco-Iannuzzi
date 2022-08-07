@@ -23,7 +23,7 @@ export class EducacionComponent implements OnInit {
   }
 
   crearEducacion(educacion:Educacion){
-    this.educacionService.createEducacion(educacion).subscribe(()=>this.cargarEducacion)
+    this.educacionService.createEducacion(educacion).subscribe(()=>this.cargarEducacion())
   }
 
   borrar(id:number){

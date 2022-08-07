@@ -1,1 +1,27 @@
-<p>nueva-edu works!</p>
+<div class="cont d-flex justify-content-center align-items-center">
+    <div class="conteiner d-flex gap-5 justify-content-center align-items-center" >
+        <img src="../../../assets/imagenes/coding.png" class="w-25" alt="">
+        <form (ngSubmit)="enviar()" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="institucion" class="form-label">Institución</label>
+                <input type="text" name="institucion" class="form-control" id="institucion"  [(ngModel)]="institucion" required>
+            </div>
+            <div class="mb-3">
+                <label for="titutlo" class="form-label">Título</label>
+                <input type="text" name="titutlo" class="form-control" id="titutlo" required [(ngModel)]="titulo">
+            </div>
+            <div class="mb-3">
+                <label for="inicio" class="form-label">Inicio</label>
+                <input type="text" name="inicio" class="form-control" id="inicio" required [(ngModel)]="inicio">
+            </div>
+            <div class="mb-3">
+                <label for="fin" class="form-label">Fin</label>
+                <input type="text" name="fin" class="form-control" id="fin" required [(ngModel)]="fin">
+            </div>
+            <div class="botones">
+                <button type="submit" class="btn btn-primary">Crear</button>
+                <button type="submit" class="btn btn btn-danger" (click)="volver()" >Cancelar</button>
+            </div>
+            
+        </form>
+    </div>

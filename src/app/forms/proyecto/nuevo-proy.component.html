@@ -1,1 +1,25 @@
-<p>nuevo-proy works!</p>
+<div class="cont d-flex justify-content-center align-items-center">
+    <div class="conteiner d-flex gap-5 justify-content-center align-items-center" >
+        <img src="../../../assets/imagenes/coding.png" class="w-25" alt="">
+        <form (ngSubmit)="enviar()">
+            <div class="mb-3">
+                <label for="titutlo" class="form-label">Titulo del Proyecto</label>
+                <input type="text" name="titutlo" class="form-control" id="titutlo" required [(ngModel)]="titulo">
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripcion</label>
+                <input type="text" name="tareas" class="form-control" id="descripcion" required [(ngModel)]="descripcion">
+            </div>
+            <div class="mb-3">
+                <label for="url del proyecto" class="form-label">Url del proyecto</label>
+                <input type="text" name="url del proyecto" class="form-control" id="url del proyecto" required [(ngModel)]="proyUrl">
+            </div>
+            
+            <div class="botones">
+                <button type="submit" class="btn btn-primary">Crear</button>
+                <button type="submit" class="btn btn btn-danger" (click)="volver()" >Cancelar</button>
+            </div>
+            
+        </form>
+    </div>
+

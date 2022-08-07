@@ -21,7 +21,7 @@ export class LogoComponent implements OnInit {
 
   logOut(){
     sessionStorage.removeItem('token');
-    this.router.navigate(['login'])
+    this.router.navigate(["login"]);
   }
 
 }

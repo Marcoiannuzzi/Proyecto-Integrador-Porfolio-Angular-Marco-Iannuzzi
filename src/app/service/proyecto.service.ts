@@ -12,7 +12,19 @@ export class ProyectoService {
 
   constructor(private http:HttpClient) { }
 
-  public getProyect():Observable<Proyecto[]>{
+  public getProyecto():Observable<Proyecto[]>{
     return this.http.get<Proyecto[]>(`${this.url}proyectos`);
+  }
+
+   public createProyecto(proyecto:Proyecto):Observable<any>{
+    return this.http.post<any>(`${this.url}proyectos`, proyecto)
+  }
+
+  public updateProyecto(proyecto:Proyecto):Observable<any>{
+    return this.http.put<any>(`${this.url}proyectos`, proyecto)
+  }
+
+  public deleteProyecto(id:number):Observable<any>{
+    return this.http.delete<any>(`${this.url}proyectos/${id}`)
   }
 }

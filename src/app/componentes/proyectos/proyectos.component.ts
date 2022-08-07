@@ -16,8 +16,20 @@ export class ProyectosComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.proyectoService.getProyect().subscribe(data=>this.listaProyectos=data);
+    this.cargarProyectos();
     this.token=sessionStorage.getItem('token')
+  }
+
+  cargarProyectos(){
+    this.proyectoService.getProyecto().subscribe((data)=>{this.listaProyectos=data});
+  }
+
+  crearProyectos(educacion:Proyecto){
+    this.proyectoService.createProyecto(educacion).subscribe(()=>this.cargarProyectos)
+  }
+
+  borrar(id:number){
+    this.proyectoService.deleteProyecto(id).subscribe(()=> this.cargarProyectos())
   }
 
 }
