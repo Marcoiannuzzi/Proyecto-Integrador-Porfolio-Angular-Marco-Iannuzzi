@@ -10,11 +10,13 @@ import { EducacionService } from 'src/app/service/educacion.service';
 export class EducacionComponent implements OnInit {
 
   educacion:Educacion[]|undefined;
+  token:string|null = null;
 
   constructor(private educacionService:EducacionService) { }
 
   ngOnInit(): void {
     this.cargarEducacion();
+    this.token=sessionStorage.getItem('token')
   }
   cargarEducacion(){
     this.educacionService.getEducacion().subscribe((data)=>{this.educacion=data});

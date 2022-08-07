@@ -3,6 +3,7 @@
     <div class="login d-flex gap-2">
         <button type="button" class="btn btn btn-outline-danger"><a href="https://github.com/Marcoiannuzzi" target="_blank">GitHub</a></button>
         <button type="button" class="btn btn-outline-info text-white"><a href="https://www.linkedin.com/in/marco-d-iannuzzi/" target="_blank" >LinkedIn</a></button>
-        <button type="button" class="btn btn-outline-primary text-white" (click)="login()">Login</button>  
+        <button type="button" class="btn btn-outline-primary text-white" (click)="login()" *ngIf="!token">Login</button>
+        <button type="button" class="btn btn-outline-danger text-white" (click)="logOut()" *ngIf="token">logout</button>  
     </div> 
 </div>

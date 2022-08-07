@@ -10,12 +10,14 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
 export class ProyectosComponent implements OnInit {
 
   listaProyectos:Proyecto[]|undefined;
+  token:string|null=null;
 
   constructor(private proyectoService:ProyectoService) { }
 
   ngOnInit(): void {
 
     this.proyectoService.getProyect().subscribe(data=>this.listaProyectos=data);
+    this.token=sessionStorage.getItem('token')
   }
 
 }

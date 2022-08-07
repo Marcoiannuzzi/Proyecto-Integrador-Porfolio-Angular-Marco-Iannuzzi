@@ -10,12 +10,15 @@ import { PersonaService } from 'src/app/service/persona.service';
 })
 export class AcercaDeComponent implements OnInit {
 
-  persona : Persona|undefined
+  persona : Persona|undefined;
+  token:string|null = null;
 
   constructor(private personaService:PersonaService ) { }
 
   ngOnInit(): void {
     this.personaService.getPersona().subscribe(data=>{this.persona=data})
+    this.token = sessionStorage.getItem('token')
   }
+
 
 }

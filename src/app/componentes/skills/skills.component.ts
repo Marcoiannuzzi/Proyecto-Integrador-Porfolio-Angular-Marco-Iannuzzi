@@ -10,11 +10,13 @@ import { SkillService } from 'src/app/service/skill.service';
 export class SkillsComponent implements OnInit {
 
   listaSkills:Skill[]|undefined;
+  token: string | null = null;
 
   constructor(private skillService:SkillService) { }
 
   ngOnInit(): void {
     this.skillService.getSkill().subscribe(data=>{this.listaSkills=data})
+    this.token=sessionStorage.getItem('token');
   }
 
 }

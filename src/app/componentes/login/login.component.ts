@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
     this.logged=true;
     console.log(this.logged)
     sessionStorage.setItem("token","conectado");
+    this.router.navigate(['inicio'])
    }else{
     alert("usuario o contraseña incorrectos!!")
    }
