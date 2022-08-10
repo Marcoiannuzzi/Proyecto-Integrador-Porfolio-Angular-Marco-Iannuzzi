@@ -10,13 +10,13 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
 })
 export class ProyectoUpdateComponent implements OnInit {
 
-  proyect:Proyecto;
+  proyect:Proyecto | undefined;
 
   constructor( private router:Router, private proyectoService:ProyectoService, private aRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
     const id= parseInt(this.aRoute.snapshot.paramMap.get('id'));
-    this.proyectoService.getOneProyecto(id).subscribe(data=>console.log(data))
+    this.proyectoService.getOneProyecto(id).subscribe(data=>this.proyect=data)
   }
 
   
