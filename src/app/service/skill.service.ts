@@ -27,4 +27,9 @@ export class SkillService {
   public deleteSkill(id:number):Observable<any>{
     return this.http.delete<any>(`${this.url}skills/${id}`)
   }
+
+  public getOneSkill(id:number):Observable<Skill>{
+    return this.http.get<Skill>(`${this.url}skills/${id}`)
+  }
+
 }

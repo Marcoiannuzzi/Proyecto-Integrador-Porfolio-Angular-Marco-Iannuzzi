@@ -64,6 +64,10 @@
     width: 150px;
 }
 
+button{
+    cursor: pointer;
+}
+
 
 /* -- acerca de -- */
 

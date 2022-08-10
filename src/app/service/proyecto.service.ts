@@ -14,6 +14,10 @@ export class ProyectoService {
 
   public getProyecto():Observable<Proyecto[]>{
     return this.http.get<Proyecto[]>(`${this.url}proyectos`);
+  } 
+  
+  public getOneProyecto(id:number):Observable<Proyecto>{
+    return this.http.get<Proyecto>(`${this.url}proyetos/${id}`)
   }
 
    public createProyecto(proyecto:Proyecto):Observable<any>{
@@ -27,4 +31,6 @@ export class ProyectoService {
   public deleteProyecto(id:number):Observable<any>{
     return this.http.delete<any>(`${this.url}proyectos/${id}`)
   }
+
+ 
 }

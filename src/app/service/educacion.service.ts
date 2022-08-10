@@ -16,6 +16,10 @@ export class EducacionService {
     return this.http.get<Educacion[]>(`${this.url}estudios`)
   }
 
+  public getOneEducation(id:number):Observable<Educacion>{
+    return this.http.get<Educacion>(`${this.url}estudios/${id}`)
+  }
+
   public createEducacion(educacion:Educacion):Observable<any>{
     return this.http.post<any>(`${this.url}estudios`, educacion)
   }

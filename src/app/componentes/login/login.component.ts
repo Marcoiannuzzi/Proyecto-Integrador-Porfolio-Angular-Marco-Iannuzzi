@@ -19,13 +19,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.userService.getEducacion().subscribe((data)=>this.user=data)
-    console.log(this.logged)
+    
   }
 
   login():void{
    if(this.user?.password == this.password && this.user?.email == this.email){
     this.logged=true;
-    console.log(this.logged)
     sessionStorage.setItem("token","conectado");
     this.router.navigate(['inicio'])
    }else{

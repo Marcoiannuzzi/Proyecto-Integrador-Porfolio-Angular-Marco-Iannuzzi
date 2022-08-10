@@ -20,6 +20,10 @@ import { NuevoProyComponent } from './forms/proyecto/nuevo-proy.component';
 import { NuevaEduComponent } from './forms/educacion/nueva-edu.component';
 import { NuevaExpComponent } from './forms/experiencia/nueva-exp.component';
 import { NuevaSkillComponent } from './forms/skill/nueva-skill.component';
+import { EducacionUpdateComponent } from './update/educacion/educacion-update/educacion-update.component';
+import { ExperienciaUpdateComponent } from './update/experiencia/experiencia-update/experiencia-update.component';
+import { SkillUpdateComponent } from './update/skill/skill-update/skill-update.component';
+import { ProyectoUpdateComponent } from './update/proyecto/proyecto-update/proyecto-update.component';
 
 
 
@@ -40,6 +44,10 @@ import { NuevaSkillComponent } from './forms/skill/nueva-skill.component';
     NuevaEduComponent,
     NuevaExpComponent,
     NuevaSkillComponent,
+    EducacionUpdateComponent,
+    ExperienciaUpdateComponent,
+    SkillUpdateComponent,
+    ProyectoUpdateComponent,
 
    
   ],

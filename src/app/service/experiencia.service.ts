@@ -28,4 +28,7 @@ export class ExperienciaService {
     return this.http.delete<any>(`${this.url}experiencias/${id}`)
   }
 
+  public getOneExperiencia(id:number):Observable<Experiencia>{
+    return this.http.get<Experiencia>(`${this.url}experiencias/${id}`)
+  }
 }
