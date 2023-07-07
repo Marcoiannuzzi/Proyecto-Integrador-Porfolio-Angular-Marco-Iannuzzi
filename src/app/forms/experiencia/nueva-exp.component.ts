@@ -10,7 +10,7 @@ import { ExperienciaService } from 'src/app/service/experiencia.service';
 })
 export class NuevaExpComponent implements OnInit {
 
-  expId: number = 0;
+  id: number = 0;
   institucion:String ='';
   tareas:String = '';
   inicio:String = '';
@@ -23,7 +23,7 @@ export class NuevaExpComponent implements OnInit {
 
   enviar(){
     const exp:Experiencia={
-      expId:this.expId,
+      id:this.id,
       institucion:this.institucion,
       tareas:this.tareas,
       inicio:this.inicio,

@@ -10,7 +10,7 @@ import { SkillService } from 'src/app/service/skill.service';
 })
 export class NuevaSkillComponent implements OnInit {
 
-  skillId:number=0;
+  id:number=0;
   nombre:String='';
   porcentaje:number=0;
 
@@ -21,7 +21,7 @@ export class NuevaSkillComponent implements OnInit {
 
   enviar(){
     const skill:Skill = {
-      skillId:this.skillId,
+      id:this.id,
       nombre:this.nombre,
       porcentaje:this.porcentaje,
     }

@@ -10,7 +10,7 @@ import { EducacionService } from 'src/app/service/educacion.service';
 })
 export class NuevaEduComponent implements OnInit {
 
-  eduId: number = 0;
+  id: number = 0;
   institucion:String ='';
   titulo:String = '';
   inicio:String = '';
@@ -24,15 +24,17 @@ export class NuevaEduComponent implements OnInit {
 
   enviar(){
     const edu:Educacion = {
-      eduId:this.eduId,
+      id:this.id,
       institucion: this.institucion,
       titulo: this.titulo,
       inicio: this.inicio,
       fin: this.fin
     } 
     
-    this.educacionService.createEducacion(edu).subscribe(()=>alert('Se ha agregado una nueva educacion!'));
-    this.router.navigate(['inicio']);
+    this.educacionService.createEducacion(edu).subscribe(()=>{
+      alert('Se ha agregado una nueva educacion!');
+      this.router.navigate(['inicio']);
+    });
 
   }
 

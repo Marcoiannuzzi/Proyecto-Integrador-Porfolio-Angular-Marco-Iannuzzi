@@ -7,6 +7,7 @@ export interface Persona {
     localidad:String;
     telefono:String;
     email:String;
+    password:String;
     acerca:String;
     linkedInUrl: String;
     imgUrl:String;

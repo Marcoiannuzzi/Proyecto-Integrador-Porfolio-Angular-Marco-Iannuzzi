@@ -10,7 +10,7 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
 })
 export class NuevoProyComponent implements OnInit {
 
-  proyId:number=0;
+  id:number=0;
   titulo:String='';
   descripcion:String=''
   proyUrl:String='';
@@ -23,7 +23,7 @@ export class NuevoProyComponent implements OnInit {
 
   enviar(){
     const proy:Proyecto = {
-      proyId : this.proyId,
+      id : this.id,
       titulo : this.titulo,
       descripcion : this.descripcion,
       proyUrl : this.proyUrl

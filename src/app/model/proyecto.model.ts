@@ -1,5 +1,5 @@
 export interface Proyecto {
-    proyId:number;
+    id:number;
     titulo:String;
     descripcion:String
     proyUrl:String;

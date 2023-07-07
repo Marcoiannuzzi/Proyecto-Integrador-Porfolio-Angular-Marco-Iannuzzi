@@ -8,7 +8,7 @@ import { Educacion } from '../model/educacion.model';
 })
 export class EducacionService {
 
-  url = 'http://localhost:8081/api/'
+  url = 'https://localhost:7126/api/'
 
   constructor(private http: HttpClient) { }
 
@@ -25,7 +25,7 @@ export class EducacionService {
   }
 
   public updateEducacion(educacion:Educacion):Observable<any>{
-    return this.http.put<any>(`${this.url}estudios`, educacion)
+    return this.http.put<any>(`${this.url}estudios/${educacion.id}`, educacion)
   }
 
   public deleteEducacion(id:number):Observable<any>{

@@ -8,7 +8,7 @@ import { Proyecto } from '../model/proyecto.model';
 })
 export class ProyectoService {
 
-  url='http://localhost:8081/api/'
+  url='https://localhost:7126/api/'
 
   constructor(private http:HttpClient) { }
 

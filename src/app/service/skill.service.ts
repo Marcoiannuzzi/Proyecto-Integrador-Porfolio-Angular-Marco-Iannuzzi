@@ -8,7 +8,7 @@ import { Skill } from '../model/skill.model';
 })
 export class SkillService {
 
-  url='http://localhost:8081/api/'
+  url='https://localhost:7126/api/'
 
   constructor(private http:HttpClient) { }
 

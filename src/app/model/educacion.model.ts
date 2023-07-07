@@ -1,5 +1,5 @@
 export interface Educacion {
-    eduId:number;
+    id:number;
     institucion:String;
     titulo:String;
     inicio:String;
