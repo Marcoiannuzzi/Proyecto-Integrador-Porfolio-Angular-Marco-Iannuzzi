@@ -25,9 +25,13 @@ export class NuevaSkillComponent implements OnInit {
       nombre:this.nombre,
       porcentaje:this.porcentaje,
     }
-    this.skillService.createSkill(skill).subscribe(()=> alert('Nueva Skill agregada con exito!'));
-    this.router.navigate(['inicio']);
-
+    this.skillService.createSkill(skill).subscribe({
+      next : () => {
+        alert('Nueva Skill agregada con exito!')
+      this.router.navigate(['inicio'])
+    },
+    error : (err) => console.log(err)
+    });
   }
 
   volver(){

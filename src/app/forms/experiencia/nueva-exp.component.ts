@@ -29,8 +29,13 @@ export class NuevaExpComponent implements OnInit {
       inicio:this.inicio,
       fin:this.fin
     }
-    this.experienciaService.createExperiencia(exp).subscribe(()=>alert('Se ha agregado una nueva experiencia!'));
-    this.router.navigate(['inicio']);
+    this.experienciaService.createExperiencia(exp).subscribe({
+      next:() => {
+        alert('Se ha agregado una nueva experiencia!')
+        this.router.navigate(['inicio']);
+      },
+      error:()=> console.error()
+    });
   }
 
   volver(){

@@ -29,9 +29,13 @@ export class NuevoProyComponent implements OnInit {
       proyUrl : this.proyUrl
     }
 
-    this.proyectoService.createProyecto(proy).subscribe(()=>alert('Proyecto creado con exito!'));
-    this.router.navigate(['inicio']);
-
+    this.proyectoService.createProyecto(proy).subscribe({
+      next:()=>{
+        alert('Proyecto creado con exito!')
+        this.router.navigate(['inicio']) 
+      },
+      error:(err)=>console.error(err)
+    });
   }
 
   volver(){
