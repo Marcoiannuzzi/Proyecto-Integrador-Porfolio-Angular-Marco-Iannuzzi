@@ -1,4 +1,4 @@
 export const environment = {
-  urlDeveloper:'http://www.marcoiannuzzi.somee.com/api/',
+  urlDeveloper:'https://www.marcoiannuzzi.somee.com/api/',
   production: true
 };
